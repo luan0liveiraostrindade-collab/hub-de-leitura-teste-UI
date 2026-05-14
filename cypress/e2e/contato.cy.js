@@ -1,3 +1,5 @@
+/// <reference types="cypress"/> 
+
 describe('Funcionalidade: Contato', () => {
 
   beforeEach(() => {
@@ -11,7 +13,6 @@ describe('Funcionalidade: Contato', () => {
     cy.get('[name="subject"]').select('Parcerias')
     cy.get('[name="message"]').type('Mensagem de teste')
     cy.get('#btn-submit').click()
-    //Resultado Esperado
     cy.contains('Contato enviado com sucesso! ').should('exist')
   });
 
